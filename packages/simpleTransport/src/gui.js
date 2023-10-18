@@ -7,9 +7,7 @@ class SimpleTransportElement extends HTMLElement {
         this.module = module;
 		this.root = this.attachShadow({ mode: 'open' });
 		const $style = document.createElement('style');
-		$style.innerHTML = `
-
-`;
+		$style.innerHTML = ``;
 		this.root.appendChild($style);
 		const $container = document.createElement('div');
         $container.classList.add('container');
@@ -57,8 +55,10 @@ class SimpleTransportElement extends HTMLElement {
             if (this.$bar.textContent !== temp) this.$bar.textContent = temp;
             temp = beat.toString();
             if (this.$beat.textContent !== temp) this.$beat.textContent = temp;
-            temp = tick.toString();
-            if (this.$tick.textContent !== temp) this.$tick.textContent = temp;
+            //temp = tick.toString();
+            //if (this.$tick.textContent !== temp) this.$tick.textContent = temp;
+            // sleep
+            await new Promise((resolve) => setTimeout(resolve, 50));
             this.$raf = window.requestAnimationFrame(this.handleAnimationFrame);
         };
         this.$raf = window.requestAnimationFrame(this.handleAnimationFrame);
