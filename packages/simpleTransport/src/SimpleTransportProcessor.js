@@ -32,7 +32,7 @@ const getSimpleTransportProcessor = (moduleId) => {
             this._tick = 0;
             this._tempo = 60;
             this._ppq = 240 * 4;
-            this._playing = !false;
+            this._playing = false;
             this._tempo = 60;
             this._timeSigDenominator = 4;
             this._timeSigNumerator = 4;
@@ -235,7 +235,7 @@ const getSimpleTransportProcessor = (moduleId) => {
             this._emitTranportEvent();
         }
         _emitTranportEvent() {
-            const playing = !!this._parameterState.timeSigNumerator?.value || false;
+            const playing = this._playing;
             const timeSigNumerator = this._parameterState.timeSigNumerator?.value || 4;
             const timeSigDenominator = this._parameterState.timeSigDenominator?.value || 4;
             const tempo = this._parameterState.tempo?.value || 60;

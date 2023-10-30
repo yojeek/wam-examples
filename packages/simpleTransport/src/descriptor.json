@@ -1,4 +1,5 @@
 {
+    "identifier": "wam-example-simple-transport",
     "name": "Simple Tranport",
     "vendor": "WebAudioModule",
     "description": "wam-tranport event generator",

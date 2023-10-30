@@ -1,0 +1,12 @@
+{
+  "name": "SimpleMidiTransport",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup --config rollup.config.js --bundleConfigAsCjs"
+  },
+  "dependencies": {
+    "rollup": "^3.26.2"
+  }
+}
